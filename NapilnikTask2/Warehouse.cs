@@ -4,7 +4,6 @@ using System.Text;
 
 namespace NapilnikTask2
 {
-
     public class Warehouse : IGoodsStore
     {
         private readonly Dictionary<Good, int> _storedGoods = new Dictionary<Good, int>();

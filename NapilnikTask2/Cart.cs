@@ -4,11 +4,10 @@ using System.Text;
 
 namespace NapilnikTask2
 {
-
     public class Cart
     {
-        private Dictionary<Good, int> _goods = new Dictionary<Good, int>();
-        private IGoodsStore _goodsStore;
+        private readonly Dictionary<Good, int> _goods = new Dictionary<Good, int>();
+        private readonly IGoodsStore _goodsStore;
 
         public Cart(IGoodsStore goodsStore)
         {
@@ -21,6 +20,7 @@ namespace NapilnikTask2
             {
                 throw new ArgumentOutOfRangeException();
             }
+
             if (_goods.ContainsKey(good))
             {
                 _goods[good] += amount;
